@@ -1,0 +1,467 @@
+//
+// Source code recreated from a .class file by IntelliJ IDEA
+// (powered by Fernflower decompiler)
+//
+
+package com.hwagain.framework.api.org.dto;
+
+import com.hwagain.framework.core.dto.BaseDto;
+import java.io.Serializable;
+import java.util.Date;
+
+public class SysOrgPersonDto extends BaseDto implements Serializable {
+    private static final long serialVersionUID = 1L;
+    private String fdName;
+    private String fdPinyin;
+    private String fdUid;
+    private String fdShortName;
+    private String fdEmail;
+    private String fdUserPassword;
+    private String fdDepartmentName;
+    private String fdEmergencyContact;
+    private Integer fdUserType;
+    private String fdEmployeeNumber;
+    private String fdMobile;
+    private String fdTelephoneNumber;
+    private String fdHomeAddress;
+    private String fdPostalAddress;
+    private String fdSecureMobile;
+    private Integer fdOrder;
+    private String fdNo;
+    private String fdUidEmployeeNumber;
+    private String fdKeyword;
+    private Integer fdIsAvailable;
+    private Integer fdIsBusiness;
+    private String fdMemo;
+    private String fdHierarchyId;
+    private Date fdCreateTime;
+    private String fdAlterTime;
+    private String fdPortalLink;
+    private String fdPortalName;
+    private String fdThisLeaderid;
+    private String fdSuperLeaderid;
+    private String fdParentorgid;
+    private String fdParentid;
+    private String fdEnglishName;
+    private Date fdLastUpdateTime;
+    private Integer fdSign;
+    private Integer fdIsCharge;
+    private String fdCateid;
+    private String fdInDustry;
+    private String fdPartTimeDepartment;
+    private String fdHrPartDepartment;
+    private Integer fdEmpstatus;
+    private String fdPositionName;
+    private String fdMailSystem;
+    private String fdPosition;
+    private String fdDepartmentNumber;
+    private String fdRank;
+    private String fdReturnId;
+    private String ldapSyncFlag;
+    private String fdLocation;
+    private String sex;
+    private String companyid;
+
+    public SysOrgPersonDto() {
+    }
+
+    public String getFdDepartmentNumber() {
+        return this.fdDepartmentNumber;
+    }
+
+    public void setFdDepartmentNumber(String fdDepartmentNumber) {
+        this.fdDepartmentNumber = fdDepartmentNumber;
+    }
+
+    public String getFdPosition() {
+        return this.fdPosition;
+    }
+
+    public void setFdPosition(String fdPosition) {
+        this.fdPosition = fdPosition;
+    }
+
+    public String getFdName() {
+        return this.fdName;
+    }
+
+    public void setFdName(String fdName) {
+        this.fdName = fdName;
+    }
+
+    public String getFdPinyin() {
+        return this.fdPinyin;
+    }
+
+    public void setFdPinyin(String fdPinyin) {
+        this.fdPinyin = fdPinyin;
+    }
+
+    public String getFdUid() {
+        return this.fdUid;
+    }
+
+    public void setFdUid(String fdUid) {
+        this.fdUid = fdUid;
+    }
+
+    public String getFdShortName() {
+        return this.fdShortName;
+    }
+
+    public void setFdShortName(String fdShortName) {
+        this.fdShortName = fdShortName;
+    }
+
+    public String getFdEmail() {
+        return this.fdEmail;
+    }
+
+    public void setFdEmail(String fdEmail) {
+        this.fdEmail = fdEmail;
+    }
+
+    public String getFdUserPassword() {
+        return this.fdUserPassword;
+    }
+
+    public void setFdUserPassword(String fdUserPassword) {
+        this.fdUserPassword = fdUserPassword;
+    }
+
+    public String getFdDepartmentName() {
+        return this.fdDepartmentName;
+    }
+
+    public void setFdDepartmentName(String fdDepartmentName) {
+        this.fdDepartmentName = fdDepartmentName;
+    }
+
+    public String getFdEmergencyContact() {
+        return this.fdEmergencyContact;
+    }
+
+    public void setFdEmergencyContact(String fdEmergencyContact) {
+        this.fdEmergencyContact = fdEmergencyContact;
+    }
+
+    public Integer getFdUserType() {
+        return this.fdUserType;
+    }
+
+    public void setFdUserType(Integer fdUserType) {
+        this.fdUserType = fdUserType;
+    }
+
+    public String getFdEmployeeNumber() {
+        return this.fdEmployeeNumber;
+    }
+
+    public void setFdEmployeeNumber(String fdEmployeeNumber) {
+        this.fdEmployeeNumber = fdEmployeeNumber;
+    }
+
+    public String getFdMobile() {
+        return this.fdMobile;
+    }
+
+    public void setFdMobile(String fdMobile) {
+        this.fdMobile = fdMobile;
+    }
+
+    public String getFdTelephoneNumber() {
+        return this.fdTelephoneNumber;
+    }
+
+    public void setFdTelephoneNumber(String fdTelephoneNumber) {
+        this.fdTelephoneNumber = fdTelephoneNumber;
+    }
+
+    public String getFdHomeAddress() {
+        return this.fdHomeAddress;
+    }
+
+    public void setFdHomeAddress(String fdHomeAddress) {
+        this.fdHomeAddress = fdHomeAddress;
+    }
+
+    public String getFdPostalAddress() {
+        return this.fdPostalAddress;
+    }
+
+    public void setFdPostalAddress(String fdPostalAddress) {
+        this.fdPostalAddress = fdPostalAddress;
+    }
+
+    public String getFdSecureMobile() {
+        return this.fdSecureMobile;
+    }
+
+    public void setFdSecureMobile(String fdSecureMobile) {
+        this.fdSecureMobile = fdSecureMobile;
+    }
+
+    public Integer getFdOrder() {
+        return this.fdOrder;
+    }
+
+    public void setFdOrder(Integer fdOrder) {
+        this.fdOrder = fdOrder;
+    }
+
+    public String getFdNo() {
+        return this.fdNo;
+    }
+
+    public void setFdNo(String fdNo) {
+        this.fdNo = fdNo;
+    }
+
+    public String getFdUidEmployeeNumber() {
+        return this.fdUidEmployeeNumber;
+    }
+
+    public void setFdUidEmployeeNumber(String fdUidEmployeeNumber) {
+        this.fdUidEmployeeNumber = fdUidEmployeeNumber;
+    }
+
+    public String getFdKeyword() {
+        return this.fdKeyword;
+    }
+
+    public void setFdKeyword(String fdKeyword) {
+        this.fdKeyword = fdKeyword;
+    }
+
+    public Integer getFdIsAvailable() {
+        return this.fdIsAvailable;
+    }
+
+    public void setFdIsAvailable(Integer fdIsAvailable) {
+        this.fdIsAvailable = fdIsAvailable;
+    }
+
+    public Integer getFdIsBusiness() {
+        return this.fdIsBusiness;
+    }
+
+    public void setFdIsBusiness(Integer fdIsBusiness) {
+        this.fdIsBusiness = fdIsBusiness;
+    }
+
+    public String getFdMemo() {
+        return this.fdMemo;
+    }
+
+    public void setFdMemo(String fdMemo) {
+        this.fdMemo = fdMemo;
+    }
+
+    public String getFdHierarchyId() {
+        return this.fdHierarchyId;
+    }
+
+    public void setFdHierarchyId(String fdHierarchyId) {
+        this.fdHierarchyId = fdHierarchyId;
+    }
+
+    public Date getFdCreateTime() {
+        return this.fdCreateTime;
+    }
+
+    public void setFdCreateTime(Date fdCreateTime) {
+        this.fdCreateTime = fdCreateTime;
+    }
+
+    public String getFdAlterTime() {
+        return this.fdAlterTime;
+    }
+
+    public void setFdAlterTime(String fdAlterTime) {
+        this.fdAlterTime = fdAlterTime;
+    }
+
+    public String getFdPortalLink() {
+        return this.fdPortalLink;
+    }
+
+    public void setFdPortalLink(String fdPortalLink) {
+        this.fdPortalLink = fdPortalLink;
+    }
+
+    public String getFdPortalName() {
+        return this.fdPortalName;
+    }
+
+    public void setFdPortalName(String fdPortalName) {
+        this.fdPortalName = fdPortalName;
+    }
+
+    public String getFdThisLeaderid() {
+        return this.fdThisLeaderid;
+    }
+
+    public void setFdThisLeaderid(String fdThisLeaderid) {
+        this.fdThisLeaderid = fdThisLeaderid;
+    }
+
+    public String getFdSuperLeaderid() {
+        return this.fdSuperLeaderid;
+    }
+
+    public void setFdSuperLeaderid(String fdSuperLeaderid) {
+        this.fdSuperLeaderid = fdSuperLeaderid;
+    }
+
+    public String getFdParentorgid() {
+        return this.fdParentorgid;
+    }
+
+    public void setFdParentorgid(String fdParentorgid) {
+        this.fdParentorgid = fdParentorgid;
+    }
+
+    public String getFdParentid() {
+        return this.fdParentid;
+    }
+
+    public void setFdParentid(String fdParentid) {
+        this.fdParentid = fdParentid;
+    }
+
+    public String getFdEnglishName() {
+        return this.fdEnglishName;
+    }
+
+    public void setFdEnglishName(String fdEnglishName) {
+        this.fdEnglishName = fdEnglishName;
+    }
+
+    public Date getFdLastUpdateTime() {
+        return this.fdLastUpdateTime;
+    }
+
+    public void setFdLastUpdateTime(Date fdLastUpdateTime) {
+        this.fdLastUpdateTime = fdLastUpdateTime;
+    }
+
+    public Integer getFdSign() {
+        return this.fdSign;
+    }
+
+    public void setFdSign(Integer fdSign) {
+        this.fdSign = fdSign;
+    }
+
+    public Integer getFdIsCharge() {
+        return this.fdIsCharge;
+    }
+
+    public void setFdIsCharge(Integer fdIsCharge) {
+        this.fdIsCharge = fdIsCharge;
+    }
+
+    public String getFdCateid() {
+        return this.fdCateid;
+    }
+
+    public void setFdCateid(String fdCateid) {
+        this.fdCateid = fdCateid;
+    }
+
+    public String getFdInDustry() {
+        return this.fdInDustry;
+    }
+
+    public void setFdInDustry(String fdInDustry) {
+        this.fdInDustry = fdInDustry;
+    }
+
+    public String getFdPartTimeDepartment() {
+        return this.fdPartTimeDepartment;
+    }
+
+    public void setFdPartTimeDepartment(String fdPartTimeDepartment) {
+        this.fdPartTimeDepartment = fdPartTimeDepartment;
+    }
+
+    public String getFdHrPartDepartment() {
+        return this.fdHrPartDepartment;
+    }
+
+    public void setFdHrPartDepartment(String fdHrPartDepartment) {
+        this.fdHrPartDepartment = fdHrPartDepartment;
+    }
+
+    public Integer getFdEmpstatus() {
+        return this.fdEmpstatus;
+    }
+
+    public void setFdEmpstatus(Integer fdEmpstatus) {
+        this.fdEmpstatus = fdEmpstatus;
+    }
+
+    public String getFdPositionName() {
+        return this.fdPositionName;
+    }
+
+    public void setFdPositionName(String fdPositionName) {
+        this.fdPositionName = fdPositionName;
+    }
+
+    public String getFdMailSystem() {
+        return this.fdMailSystem;
+    }
+
+    public void setFdMailSystem(String fdMailSystem) {
+        this.fdMailSystem = fdMailSystem;
+    }
+
+    public String getFdRank() {
+        return this.fdRank;
+    }
+
+    public void setFdRank(String fdRank) {
+        this.fdRank = fdRank;
+    }
+
+    public String getFdReturnId() {
+        return this.fdReturnId;
+    }
+
+    public void setFdReturnId(String fdReturnId) {
+        this.fdReturnId = fdReturnId;
+    }
+
+    public String getLdapSyncFlag() {
+        return this.ldapSyncFlag;
+    }
+
+    public void setLdapSyncFlag(String ldapSyncFlag) {
+        this.ldapSyncFlag = ldapSyncFlag;
+    }
+
+    public String getFdLocation() {
+        return this.fdLocation;
+    }
+
+    public void setFdLocation(String fdLocation) {
+        this.fdLocation = fdLocation;
+    }
+
+    public String getSex() {
+        return this.sex;
+    }
+
+    public void setSex(String sex) {
+        this.sex = sex;
+    }
+
+    public String getCompanyid() {
+        return this.companyid;
+    }
+
+    public void setCompanyid(String companyid) {
+        this.companyid = companyid;
+    }
+}
