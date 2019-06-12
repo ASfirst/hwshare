@@ -1,0 +1,359 @@
+//
+// Source code recreated from a .class file by IntelliJ IDEA
+// (powered by Fernflower decompiler)
+//
+
+package com.hwagain.framework.api.org.dto;
+
+import java.io.Serializable;
+import java.math.BigDecimal;
+import java.util.Date;
+
+public class SysOrgDepartmentDto implements Serializable {
+    private static final long serialVersionUID = 1L;
+    private String fdId;
+    private String fdName;
+    private String departmentNumber;
+    private String displayName;
+    private BigDecimal fdOrder;
+    private String fdFaxNumber;
+    private BigDecimal fdMail;
+    private BigDecimal fdAci;
+    private String fdAdlocation;
+    private String fdAdparentId;
+    private String fdCreator;
+    private String fdDefaultDomain;
+    private String fdMailDomain;
+    private String fdDepartmentName;
+    private String fdIsRoot;
+    private String fdLabelCode;
+    private String fdModifier;
+    private String fdOrgArea;
+    private String fdOrgType;
+    private String fdPersonInCharge;
+    private String fdParentName;
+    private String fdParentid;
+    private String ldapParentid;
+    private Date fdLastUpdateTime;
+    private BigDecimal fdIsCharge;
+    private String fdOrganizationId;
+    private String fdPostalAddress;
+    private String fdPostalCode;
+    private String fdTelephoneNumber;
+    private String authReaderIds;
+    private String authEditorIds;
+    private String authAeditorIds;
+    private String authAreaderIds;
+    private String authOeditorIds;
+    private String authOreaderIds;
+    private Boolean isEditor;
+    private String fdReturnId;
+    private String ldapSyncFlag;
+
+    public SysOrgDepartmentDto() {
+    }
+
+    public String getFdId() {
+        return this.fdId;
+    }
+
+    public void setFdId(String fdId) {
+        this.fdId = fdId;
+    }
+
+    public String getFdName() {
+        return this.fdName;
+    }
+
+    public void setFdName(String fdName) {
+        this.fdName = fdName;
+    }
+
+    public String getDepartmentNumber() {
+        return this.departmentNumber;
+    }
+
+    public void setDepartmentNumber(String departmentNumber) {
+        this.departmentNumber = departmentNumber;
+    }
+
+    public String getDisplayName() {
+        return this.displayName;
+    }
+
+    public void setDisplayName(String displayName) {
+        this.displayName = displayName;
+    }
+
+    public BigDecimal getFdOrder() {
+        return this.fdOrder;
+    }
+
+    public void setFdOrder(BigDecimal fdOrder) {
+        this.fdOrder = fdOrder;
+    }
+
+    public String getFdFaxNumber() {
+        return this.fdFaxNumber;
+    }
+
+    public void setFdFaxNumber(String fdFaxNumber) {
+        this.fdFaxNumber = fdFaxNumber;
+    }
+
+    public BigDecimal getFdMail() {
+        return this.fdMail;
+    }
+
+    public void setFdMail(BigDecimal fdMail) {
+        this.fdMail = fdMail;
+    }
+
+    public BigDecimal getFdAci() {
+        return this.fdAci;
+    }
+
+    public void setFdAci(BigDecimal fdAci) {
+        this.fdAci = fdAci;
+    }
+
+    public String getFdAdlocation() {
+        return this.fdAdlocation;
+    }
+
+    public void setFdAdlocation(String fdAdlocation) {
+        this.fdAdlocation = fdAdlocation;
+    }
+
+    public String getFdAdparentId() {
+        return this.fdAdparentId;
+    }
+
+    public void setFdAdparentId(String fdAdparentId) {
+        this.fdAdparentId = fdAdparentId;
+    }
+
+    public String getFdCreator() {
+        return this.fdCreator;
+    }
+
+    public void setFdCreator(String fdCreator) {
+        this.fdCreator = fdCreator;
+    }
+
+    public String getFdDefaultDomain() {
+        return this.fdDefaultDomain;
+    }
+
+    public void setFdDefaultDomain(String fdDefaultDomain) {
+        this.fdDefaultDomain = fdDefaultDomain;
+    }
+
+    public String getFdMailDomain() {
+        return this.fdMailDomain;
+    }
+
+    public void setFdMailDomain(String fdMailDomain) {
+        this.fdMailDomain = fdMailDomain;
+    }
+
+    public String getFdDepartmentName() {
+        return this.fdDepartmentName;
+    }
+
+    public void setFdDepartmentName(String fdDepartmentName) {
+        this.fdDepartmentName = fdDepartmentName;
+    }
+
+    public String getFdIsRoot() {
+        return this.fdIsRoot;
+    }
+
+    public void setFdIsRoot(String fdIsRoot) {
+        this.fdIsRoot = fdIsRoot;
+    }
+
+    public String getFdLabelCode() {
+        return this.fdLabelCode;
+    }
+
+    public void setFdLabelCode(String fdLabelCode) {
+        this.fdLabelCode = fdLabelCode;
+    }
+
+    public String getFdModifier() {
+        return this.fdModifier;
+    }
+
+    public void setFdModifier(String fdModifier) {
+        this.fdModifier = fdModifier;
+    }
+
+    public String getFdOrgArea() {
+        return this.fdOrgArea;
+    }
+
+    public void setFdOrgArea(String fdOrgArea) {
+        this.fdOrgArea = fdOrgArea;
+    }
+
+    public String getFdOrgType() {
+        return this.fdOrgType;
+    }
+
+    public void setFdOrgType(String fdOrgType) {
+        this.fdOrgType = fdOrgType;
+    }
+
+    public String getFdPersonInCharge() {
+        return this.fdPersonInCharge;
+    }
+
+    public void setFdPersonInCharge(String fdPersonInCharge) {
+        this.fdPersonInCharge = fdPersonInCharge;
+    }
+
+    public String getFdParentName() {
+        return this.fdParentName;
+    }
+
+    public void setFdParentName(String fdParentName) {
+        this.fdParentName = fdParentName;
+    }
+
+    public String getFdParentid() {
+        return this.fdParentid;
+    }
+
+    public void setFdParentid(String fdParentid) {
+        this.fdParentid = fdParentid;
+    }
+
+    public String getLdapParentid() {
+        return this.ldapParentid;
+    }
+
+    public void setLdapParentid(String ldapParentid) {
+        this.ldapParentid = ldapParentid;
+    }
+
+    public Date getFdLastUpdateTime() {
+        return this.fdLastUpdateTime;
+    }
+
+    public void setFdLastUpdateTime(Date fdLastUpdateTime) {
+        this.fdLastUpdateTime = fdLastUpdateTime;
+    }
+
+    public BigDecimal getFdIsCharge() {
+        return this.fdIsCharge;
+    }
+
+    public void setFdIsCharge(BigDecimal fdIsCharge) {
+        this.fdIsCharge = fdIsCharge;
+    }
+
+    public String getFdOrganizationId() {
+        return this.fdOrganizationId;
+    }
+
+    public void setFdOrganizationId(String fdOrganizationId) {
+        this.fdOrganizationId = fdOrganizationId;
+    }
+
+    public String getFdPostalAddress() {
+        return this.fdPostalAddress;
+    }
+
+    public void setFdPostalAddress(String fdPostalAddress) {
+        this.fdPostalAddress = fdPostalAddress;
+    }
+
+    public String getFdPostalCode() {
+        return this.fdPostalCode;
+    }
+
+    public void setFdPostalCode(String fdPostalCode) {
+        this.fdPostalCode = fdPostalCode;
+    }
+
+    public String getFdTelephoneNumber() {
+        return this.fdTelephoneNumber;
+    }
+
+    public void setFdTelephoneNumber(String fdTelephoneNumber) {
+        this.fdTelephoneNumber = fdTelephoneNumber;
+    }
+
+    public String getAuthReaderIds() {
+        return this.authReaderIds;
+    }
+
+    public void setAuthReaderIds(String authReaderIds) {
+        this.authReaderIds = authReaderIds;
+    }
+
+    public String getAuthEditorIds() {
+        return this.authEditorIds;
+    }
+
+    public void setAuthEditorIds(String authEditorIds) {
+        this.authEditorIds = authEditorIds;
+    }
+
+    public String getAuthAeditorIds() {
+        return this.authAeditorIds;
+    }
+
+    public void setAuthAeditorIds(String authAeditorIds) {
+        this.authAeditorIds = authAeditorIds;
+    }
+
+    public String getAuthAreaderIds() {
+        return this.authAreaderIds;
+    }
+
+    public void setAuthAreaderIds(String authAreaderIds) {
+        this.authAreaderIds = authAreaderIds;
+    }
+
+    public String getAuthOeditorIds() {
+        return this.authOeditorIds;
+    }
+
+    public void setAuthOeditorIds(String authOeditorIds) {
+        this.authOeditorIds = authOeditorIds;
+    }
+
+    public String getAuthOreaderIds() {
+        return this.authOreaderIds;
+    }
+
+    public void setAuthOreaderIds(String authOreaderIds) {
+        this.authOreaderIds = authOreaderIds;
+    }
+
+    public Boolean getIsEditor() {
+        return this.isEditor;
+    }
+
+    public void setIsEditor(Boolean isEditor) {
+        this.isEditor = isEditor;
+    }
+
+    public String getFdReturnId() {
+        return this.fdReturnId;
+    }
+
+    public void setFdReturnId(String fdReturnId) {
+        this.fdReturnId = fdReturnId;
+    }
+
+    public String getLdapSyncFlag() {
+        return this.ldapSyncFlag;
+    }
+
+    public void setLdapSyncFlag(String ldapSyncFlag) {
+        this.ldapSyncFlag = ldapSyncFlag;
+    }
+}
