@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="test.dao.PoTransportMapper">
+  <resultMap id="BaseResultMap" type="test.model.PoTransport">
+    <id column="fd_id" jdbcType="BIGINT" property="fdId" />
+    <result column="customer_id" jdbcType="BIGINT" property="customerId" />
+    <result column="method" jdbcType="VARCHAR" property="method" />
+    <result column="price" jdbcType="DECIMAL" property="price" />
+    <result column="add_price" jdbcType="DECIMAL" property="addPrice" />
+    <result column="start_date" jdbcType="DATE" property="startDate" />
+    <result column="end_date" jdbcType="DATE" property="endDate" />
+    <result column="checked_by" jdbcType="VARCHAR" property="checkedBy" />
+    <result column="checked_date" jdbcType="TIMESTAMP" property="checkedDate" />
+    <result column="checked_remark" jdbcType="VARCHAR" property="checkedRemark" />
+    <result column="remark" jdbcType="VARCHAR" property="remark" />
+    <result column="status" jdbcType="INTEGER" property="status" />
+    <result column="creater_id" jdbcType="VARCHAR" property="createrId" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="last_alter_id" jdbcType="VARCHAR" property="lastAlterId" />
+    <result column="last_alter_time" jdbcType="TIMESTAMP" property="lastAlterTime" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    fd_id, customer_id, method, price, add_price, start_date, end_date, checked_by, checked_date, 
+    checked_remark, remark, status, creater_id, create_time, last_alter_id, last_alter_time
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from po_transport
+    where fd_id = #{fdId,jdbcType=BIGINT}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
+    delete from po_transport
+    where fd_id = #{fdId,jdbcType=BIGINT}
+  </delete>
+  <insert id="insert" parameterType="test.model.PoTransport">
+    insert into po_transport (fd_id, customer_id, method, 
+      price, add_price, start_date, 
+      end_date, checked_by, checked_date, 
+      checked_remark, remark, status, 
+      creater_id, create_time, last_alter_id, 
+      last_alter_time)
+    values (#{fdId,jdbcType=BIGINT}, #{customerId,jdbcType=BIGINT}, #{method,jdbcType=VARCHAR}, 
+      #{price,jdbcType=DECIMAL}, #{addPrice,jdbcType=DECIMAL}, #{startDate,jdbcType=DATE}, 
+      #{endDate,jdbcType=DATE}, #{checkedBy,jdbcType=VARCHAR}, #{checkedDate,jdbcType=TIMESTAMP}, 
+      #{checkedRemark,jdbcType=VARCHAR}, #{remark,jdbcType=VARCHAR}, #{status,jdbcType=INTEGER}, 
+      #{createrId,jdbcType=VARCHAR}, #{createTime,jdbcType=TIMESTAMP}, #{lastAlterId,jdbcType=VARCHAR}, 
+      #{lastAlterTime,jdbcType=TIMESTAMP})
+  </insert>
+  <insert id="insertSelective" parameterType="test.model.PoTransport">
+    insert into po_transport
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="fdId != null">
+        fd_id,
+      </if>
+      <if test="customerId != null">
+        customer_id,
+      </if>
+      <if test="method != null">
+        method,
+      </if>
+      <if test="price != null">
+        price,
+      </if>
+      <if test="addPrice != null">
+        add_price,
+      </if>
+      <if test="startDate != null">
+        start_date,
+      </if>
+      <if test="endDate != null">
+        end_date,
+      </if>
+      <if test="checkedBy != null">
+        checked_by,
+      </if>
+      <if test="checkedDate != null">
+        checked_date,
+      </if>
+      <if test="checkedRemark != null">
+        checked_remark,
+      </if>
+      <if test="remark != null">
+        remark,
+      </if>
+      <if test="status != null">
+        status,
+      </if>
+      <if test="createrId != null">
+        creater_id,
+      </if>
+      <if test="createTime != null">
+        create_time,
+      </if>
+      <if test="lastAlterId != null">
+        last_alter_id,
+      </if>
+      <if test="lastAlterTime != null">
+        last_alter_time,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="fdId != null">
+        #{fdId,jdbcType=BIGINT},
+      </if>
+      <if test="customerId != null">
+        #{customerId,jdbcType=BIGINT},
+      </if>
+      <if test="method != null">
+        #{method,jdbcType=VARCHAR},
+      </if>
+      <if test="price != null">
+        #{price,jdbcType=DECIMAL},
+      </if>
+      <if test="addPrice != null">
+        #{addPrice,jdbcType=DECIMAL},
+      </if>
+      <if test="startDate != null">
+        #{startDate,jdbcType=DATE},
+      </if>
+      <if test="endDate != null">
+        #{endDate,jdbcType=DATE},
+      </if>
+      <if test="checkedBy != null">
+        #{checkedBy,jdbcType=VARCHAR},
+      </if>
+      <if test="checkedDate != null">
+        #{checkedDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="checkedRemark != null">
+        #{checkedRemark,jdbcType=VARCHAR},
+      </if>
+      <if test="remark != null">
+        #{remark,jdbcType=VARCHAR},
+      </if>
+      <if test="status != null">
+        #{status,jdbcType=INTEGER},
+      </if>
+      <if test="createrId != null">
+        #{createrId,jdbcType=VARCHAR},
+      </if>
+      <if test="createTime != null">
+        #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="lastAlterId != null">
+        #{lastAlterId,jdbcType=VARCHAR},
+      </if>
+      <if test="lastAlterTime != null">
+        #{lastAlterTime,jdbcType=TIMESTAMP},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="test.model.PoTransport">
+    update po_transport
+    <set>
+      <if test="customerId != null">
+        customer_id = #{customerId,jdbcType=BIGINT},
+      </if>
+      <if test="method != null">
+        method = #{method,jdbcType=VARCHAR},
+      </if>
+      <if test="price != null">
+        price = #{price,jdbcType=DECIMAL},
+      </if>
+      <if test="addPrice != null">
+        add_price = #{addPrice,jdbcType=DECIMAL},
+      </if>
+      <if test="startDate != null">
+        start_date = #{startDate,jdbcType=DATE},
+      </if>
+      <if test="endDate != null">
+        end_date = #{endDate,jdbcType=DATE},
+      </if>
+      <if test="checkedBy != null">
+        checked_by = #{checkedBy,jdbcType=VARCHAR},
+      </if>
+      <if test="checkedDate != null">
+        checked_date = #{checkedDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="checkedRemark != null">
+        checked_remark = #{checkedRemark,jdbcType=VARCHAR},
+      </if>
+      <if test="remark != null">
+        remark = #{remark,jdbcType=VARCHAR},
+      </if>
+      <if test="status != null">
+        status = #{status,jdbcType=INTEGER},
+      </if>
+      <if test="createrId != null">
+        creater_id = #{createrId,jdbcType=VARCHAR},
+      </if>
+      <if test="createTime != null">
+        create_time = #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="lastAlterId != null">
+        last_alter_id = #{lastAlterId,jdbcType=VARCHAR},
+      </if>
+      <if test="lastAlterTime != null">
+        last_alter_time = #{lastAlterTime,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    where fd_id = #{fdId,jdbcType=BIGINT}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="test.model.PoTransport">
+    update po_transport
+    set customer_id = #{customerId,jdbcType=BIGINT},
+      method = #{method,jdbcType=VARCHAR},
+      price = #{price,jdbcType=DECIMAL},
+      add_price = #{addPrice,jdbcType=DECIMAL},
+      start_date = #{startDate,jdbcType=DATE},
+      end_date = #{endDate,jdbcType=DATE},
+      checked_by = #{checkedBy,jdbcType=VARCHAR},
+      checked_date = #{checkedDate,jdbcType=TIMESTAMP},
+      checked_remark = #{checkedRemark,jdbcType=VARCHAR},
+      remark = #{remark,jdbcType=VARCHAR},
+      status = #{status,jdbcType=INTEGER},
+      creater_id = #{createrId,jdbcType=VARCHAR},
+      create_time = #{createTime,jdbcType=TIMESTAMP},
+      last_alter_id = #{lastAlterId,jdbcType=VARCHAR},
+      last_alter_time = #{lastAlterTime,jdbcType=TIMESTAMP}
+    where fd_id = #{fdId,jdbcType=BIGINT}
+  </update>
+</mapper>

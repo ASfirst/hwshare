@@ -1,0 +1,532 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hwagain.sp.policy.mapper.CustomerMapper">
+  <resultMap id="BaseResultMap" type="com.hwagain.sp.policy.entity.Customer">
+    <id column="fd_id" jdbcType="BIGINT" property="fdId" />
+    <result column="map_import_id" jdbcType="INTEGER" property="mapImportId" />
+    <result column="map_culture_id" jdbcType="INTEGER" property="mapCultureId" />
+    <result column="map_china_id" jdbcType="INTEGER" property="mapChinaId" />
+    <result column="province" jdbcType="VARCHAR" property="province" />
+    <result column="city" jdbcType="VARCHAR" property="city" />
+    <result column="county" jdbcType="VARCHAR" property="county" />
+    <result column="cust_name" jdbcType="VARCHAR" property="custName" />
+    <result column="short_name" jdbcType="VARCHAR" property="shortName" />
+    <result column="cust_type_name" jdbcType="VARCHAR" property="custTypeName" />
+    <result column="enterprise_type" jdbcType="VARCHAR" property="enterpriseType" />
+    <result column="law_man" jdbcType="VARCHAR" property="lawMan" />
+    <result column="law_reposibility" jdbcType="VARCHAR" property="lawReposibility" />
+    <result column="mobile" jdbcType="VARCHAR" property="mobile" />
+    <result column="tel" jdbcType="VARCHAR" property="tel" />
+    <result column="fax" jdbcType="VARCHAR" property="fax" />
+    <result column="address" jdbcType="VARCHAR" property="address" />
+    <result column="post_no" jdbcType="VARCHAR" property="postNo" />
+    <result column="register_amount" jdbcType="DECIMAL" property="registerAmount" />
+    <result column="flow_amount" jdbcType="DECIMAL" property="flowAmount" />
+    <result column="year_amount" jdbcType="DECIMAL" property="yearAmount" />
+    <result column="is_use_finance_soft" jdbcType="VARCHAR" property="isUseFinanceSoft" />
+    <result column="soft_name" jdbcType="VARCHAR" property="softName" />
+    <result column="is_rate_paying" jdbcType="INTEGER" property="isRatePaying" />
+    <result column="investigate_by" jdbcType="VARCHAR" property="investigateBy" />
+    <result column="investigate_date" jdbcType="DATE" property="investigateDate" />
+    <result column="dealer_type_id" jdbcType="INTEGER" property="dealerTypeId" />
+    <result column="is_register" jdbcType="INTEGER" property="isRegister" />
+    <result column="developer" jdbcType="VARCHAR" property="developer" />
+    <result column="startup_business" jdbcType="INTEGER" property="startupBusiness" />
+    <result column="business_start_date" jdbcType="DATE" property="businessStartDate" />
+    <result column="business_end_date" jdbcType="DATE" property="businessEndDate" />
+    <result column="promise_weight" jdbcType="DECIMAL" property="promiseWeight" />
+    <result column="receiver_by" jdbcType="VARCHAR" property="receiverBy" />
+    <result column="receiver_mobile" jdbcType="VARCHAR" property="receiverMobile" />
+    <result column="use" jdbcType="BIT" property="use" />
+    <result column="remark" jdbcType="VARCHAR" property="remark" />
+    <result column="status" jdbcType="VARCHAR" property="status" />
+    <result column="creater_id" jdbcType="VARCHAR" property="createrId" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="last_alter_id" jdbcType="VARCHAR" property="lastAlterId" />
+    <result column="last_alter_time" jdbcType="TIMESTAMP" property="lastAlterTime" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    fd_id, map_import_id, map_culture_id, map_china_id, province, city, county, cust_name, 
+    short_name, cust_type_name, enterprise_type, law_man, law_reposibility, mobile, tel, 
+    fax, address, post_no, register_amount, flow_amount, year_amount, is_use_finance_soft, 
+    soft_name, is_rate_paying, investigate_by, investigate_date, dealer_type_id, is_register, 
+    developer, startup_business, business_start_date, business_end_date, promise_weight, 
+    receiver_by, receiver_mobile, use, remark, status, creater_id, create_time, last_alter_id, 
+    last_alter_time
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from customer
+    where fd_id = #{fdId,jdbcType=BIGINT}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
+    delete from customer
+    where fd_id = #{fdId,jdbcType=BIGINT}
+  </delete>
+  <insert id="insert" parameterType="com.hwagain.sp.policy.entity.Customer">
+    insert into customer (fd_id, map_import_id, map_culture_id, 
+      map_china_id, province, city, 
+      county, cust_name, short_name, 
+      cust_type_name, enterprise_type, law_man, 
+      law_reposibility, mobile, tel, 
+      fax, address, post_no, 
+      register_amount, flow_amount, year_amount, 
+      is_use_finance_soft, soft_name, is_rate_paying, 
+      investigate_by, investigate_date, dealer_type_id, 
+      is_register, developer, startup_business, 
+      business_start_date, business_end_date, promise_weight, 
+      receiver_by, receiver_mobile, use, 
+      remark, status, creater_id, 
+      create_time, last_alter_id, last_alter_time
+      )
+    values (#{fdId,jdbcType=BIGINT}, #{mapImportId,jdbcType=INTEGER}, #{mapCultureId,jdbcType=INTEGER}, 
+      #{mapChinaId,jdbcType=INTEGER}, #{province,jdbcType=VARCHAR}, #{city,jdbcType=VARCHAR}, 
+      #{county,jdbcType=VARCHAR}, #{custName,jdbcType=VARCHAR}, #{shortName,jdbcType=VARCHAR}, 
+      #{custTypeName,jdbcType=VARCHAR}, #{enterpriseType,jdbcType=VARCHAR}, #{lawMan,jdbcType=VARCHAR}, 
+      #{lawReposibility,jdbcType=VARCHAR}, #{mobile,jdbcType=VARCHAR}, #{tel,jdbcType=VARCHAR}, 
+      #{fax,jdbcType=VARCHAR}, #{address,jdbcType=VARCHAR}, #{postNo,jdbcType=VARCHAR}, 
+      #{registerAmount,jdbcType=DECIMAL}, #{flowAmount,jdbcType=DECIMAL}, #{yearAmount,jdbcType=DECIMAL}, 
+      #{isUseFinanceSoft,jdbcType=VARCHAR}, #{softName,jdbcType=VARCHAR}, #{isRatePaying,jdbcType=INTEGER}, 
+      #{investigateBy,jdbcType=VARCHAR}, #{investigateDate,jdbcType=DATE}, #{dealerTypeId,jdbcType=INTEGER}, 
+      #{isRegister,jdbcType=INTEGER}, #{developer,jdbcType=VARCHAR}, #{startupBusiness,jdbcType=INTEGER}, 
+      #{businessStartDate,jdbcType=DATE}, #{businessEndDate,jdbcType=DATE}, #{promiseWeight,jdbcType=DECIMAL}, 
+      #{receiverBy,jdbcType=VARCHAR}, #{receiverMobile,jdbcType=VARCHAR}, #{use,jdbcType=BIT}, 
+      #{remark,jdbcType=VARCHAR}, #{status,jdbcType=VARCHAR}, #{createrId,jdbcType=VARCHAR}, 
+      #{createTime,jdbcType=TIMESTAMP}, #{lastAlterId,jdbcType=VARCHAR}, #{lastAlterTime,jdbcType=TIMESTAMP}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.hwagain.sp.policy.entity.Customer">
+    insert into customer
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="fdId != null">
+        fd_id,
+      </if>
+      <if test="mapImportId != null">
+        map_import_id,
+      </if>
+      <if test="mapCultureId != null">
+        map_culture_id,
+      </if>
+      <if test="mapChinaId != null">
+        map_china_id,
+      </if>
+      <if test="province != null">
+        province,
+      </if>
+      <if test="city != null">
+        city,
+      </if>
+      <if test="county != null">
+        county,
+      </if>
+      <if test="custName != null">
+        cust_name,
+      </if>
+      <if test="shortName != null">
+        short_name,
+      </if>
+      <if test="custTypeName != null">
+        cust_type_name,
+      </if>
+      <if test="enterpriseType != null">
+        enterprise_type,
+      </if>
+      <if test="lawMan != null">
+        law_man,
+      </if>
+      <if test="lawReposibility != null">
+        law_reposibility,
+      </if>
+      <if test="mobile != null">
+        mobile,
+      </if>
+      <if test="tel != null">
+        tel,
+      </if>
+      <if test="fax != null">
+        fax,
+      </if>
+      <if test="address != null">
+        address,
+      </if>
+      <if test="postNo != null">
+        post_no,
+      </if>
+      <if test="registerAmount != null">
+        register_amount,
+      </if>
+      <if test="flowAmount != null">
+        flow_amount,
+      </if>
+      <if test="yearAmount != null">
+        year_amount,
+      </if>
+      <if test="isUseFinanceSoft != null">
+        is_use_finance_soft,
+      </if>
+      <if test="softName != null">
+        soft_name,
+      </if>
+      <if test="isRatePaying != null">
+        is_rate_paying,
+      </if>
+      <if test="investigateBy != null">
+        investigate_by,
+      </if>
+      <if test="investigateDate != null">
+        investigate_date,
+      </if>
+      <if test="dealerTypeId != null">
+        dealer_type_id,
+      </if>
+      <if test="isRegister != null">
+        is_register,
+      </if>
+      <if test="developer != null">
+        developer,
+      </if>
+      <if test="startupBusiness != null">
+        startup_business,
+      </if>
+      <if test="businessStartDate != null">
+        business_start_date,
+      </if>
+      <if test="businessEndDate != null">
+        business_end_date,
+      </if>
+      <if test="promiseWeight != null">
+        promise_weight,
+      </if>
+      <if test="receiverBy != null">
+        receiver_by,
+      </if>
+      <if test="receiverMobile != null">
+        receiver_mobile,
+      </if>
+      <if test="use != null">
+        use,
+      </if>
+      <if test="remark != null">
+        remark,
+      </if>
+      <if test="status != null">
+        status,
+      </if>
+      <if test="createrId != null">
+        creater_id,
+      </if>
+      <if test="createTime != null">
+        create_time,
+      </if>
+      <if test="lastAlterId != null">
+        last_alter_id,
+      </if>
+      <if test="lastAlterTime != null">
+        last_alter_time,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="fdId != null">
+        #{fdId,jdbcType=BIGINT},
+      </if>
+      <if test="mapImportId != null">
+        #{mapImportId,jdbcType=INTEGER},
+      </if>
+      <if test="mapCultureId != null">
+        #{mapCultureId,jdbcType=INTEGER},
+      </if>
+      <if test="mapChinaId != null">
+        #{mapChinaId,jdbcType=INTEGER},
+      </if>
+      <if test="province != null">
+        #{province,jdbcType=VARCHAR},
+      </if>
+      <if test="city != null">
+        #{city,jdbcType=VARCHAR},
+      </if>
+      <if test="county != null">
+        #{county,jdbcType=VARCHAR},
+      </if>
+      <if test="custName != null">
+        #{custName,jdbcType=VARCHAR},
+      </if>
+      <if test="shortName != null">
+        #{shortName,jdbcType=VARCHAR},
+      </if>
+      <if test="custTypeName != null">
+        #{custTypeName,jdbcType=VARCHAR},
+      </if>
+      <if test="enterpriseType != null">
+        #{enterpriseType,jdbcType=VARCHAR},
+      </if>
+      <if test="lawMan != null">
+        #{lawMan,jdbcType=VARCHAR},
+      </if>
+      <if test="lawReposibility != null">
+        #{lawReposibility,jdbcType=VARCHAR},
+      </if>
+      <if test="mobile != null">
+        #{mobile,jdbcType=VARCHAR},
+      </if>
+      <if test="tel != null">
+        #{tel,jdbcType=VARCHAR},
+      </if>
+      <if test="fax != null">
+        #{fax,jdbcType=VARCHAR},
+      </if>
+      <if test="address != null">
+        #{address,jdbcType=VARCHAR},
+      </if>
+      <if test="postNo != null">
+        #{postNo,jdbcType=VARCHAR},
+      </if>
+      <if test="registerAmount != null">
+        #{registerAmount,jdbcType=DECIMAL},
+      </if>
+      <if test="flowAmount != null">
+        #{flowAmount,jdbcType=DECIMAL},
+      </if>
+      <if test="yearAmount != null">
+        #{yearAmount,jdbcType=DECIMAL},
+      </if>
+      <if test="isUseFinanceSoft != null">
+        #{isUseFinanceSoft,jdbcType=VARCHAR},
+      </if>
+      <if test="softName != null">
+        #{softName,jdbcType=VARCHAR},
+      </if>
+      <if test="isRatePaying != null">
+        #{isRatePaying,jdbcType=INTEGER},
+      </if>
+      <if test="investigateBy != null">
+        #{investigateBy,jdbcType=VARCHAR},
+      </if>
+      <if test="investigateDate != null">
+        #{investigateDate,jdbcType=DATE},
+      </if>
+      <if test="dealerTypeId != null">
+        #{dealerTypeId,jdbcType=INTEGER},
+      </if>
+      <if test="isRegister != null">
+        #{isRegister,jdbcType=INTEGER},
+      </if>
+      <if test="developer != null">
+        #{developer,jdbcType=VARCHAR},
+      </if>
+      <if test="startupBusiness != null">
+        #{startupBusiness,jdbcType=INTEGER},
+      </if>
+      <if test="businessStartDate != null">
+        #{businessStartDate,jdbcType=DATE},
+      </if>
+      <if test="businessEndDate != null">
+        #{businessEndDate,jdbcType=DATE},
+      </if>
+      <if test="promiseWeight != null">
+        #{promiseWeight,jdbcType=DECIMAL},
+      </if>
+      <if test="receiverBy != null">
+        #{receiverBy,jdbcType=VARCHAR},
+      </if>
+      <if test="receiverMobile != null">
+        #{receiverMobile,jdbcType=VARCHAR},
+      </if>
+      <if test="use != null">
+        #{use,jdbcType=BIT},
+      </if>
+      <if test="remark != null">
+        #{remark,jdbcType=VARCHAR},
+      </if>
+      <if test="status != null">
+        #{status,jdbcType=VARCHAR},
+      </if>
+      <if test="createrId != null">
+        #{createrId,jdbcType=VARCHAR},
+      </if>
+      <if test="createTime != null">
+        #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="lastAlterId != null">
+        #{lastAlterId,jdbcType=VARCHAR},
+      </if>
+      <if test="lastAlterTime != null">
+        #{lastAlterTime,jdbcType=TIMESTAMP},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.hwagain.sp.policy.entity.Customer">
+    update customer
+    <set>
+      <if test="mapImportId != null">
+        map_import_id = #{mapImportId,jdbcType=INTEGER},
+      </if>
+      <if test="mapCultureId != null">
+        map_culture_id = #{mapCultureId,jdbcType=INTEGER},
+      </if>
+      <if test="mapChinaId != null">
+        map_china_id = #{mapChinaId,jdbcType=INTEGER},
+      </if>
+      <if test="province != null">
+        province = #{province,jdbcType=VARCHAR},
+      </if>
+      <if test="city != null">
+        city = #{city,jdbcType=VARCHAR},
+      </if>
+      <if test="county != null">
+        county = #{county,jdbcType=VARCHAR},
+      </if>
+      <if test="custName != null">
+        cust_name = #{custName,jdbcType=VARCHAR},
+      </if>
+      <if test="shortName != null">
+        short_name = #{shortName,jdbcType=VARCHAR},
+      </if>
+      <if test="custTypeName != null">
+        cust_type_name = #{custTypeName,jdbcType=VARCHAR},
+      </if>
+      <if test="enterpriseType != null">
+        enterprise_type = #{enterpriseType,jdbcType=VARCHAR},
+      </if>
+      <if test="lawMan != null">
+        law_man = #{lawMan,jdbcType=VARCHAR},
+      </if>
+      <if test="lawReposibility != null">
+        law_reposibility = #{lawReposibility,jdbcType=VARCHAR},
+      </if>
+      <if test="mobile != null">
+        mobile = #{mobile,jdbcType=VARCHAR},
+      </if>
+      <if test="tel != null">
+        tel = #{tel,jdbcType=VARCHAR},
+      </if>
+      <if test="fax != null">
+        fax = #{fax,jdbcType=VARCHAR},
+      </if>
+      <if test="address != null">
+        address = #{address,jdbcType=VARCHAR},
+      </if>
+      <if test="postNo != null">
+        post_no = #{postNo,jdbcType=VARCHAR},
+      </if>
+      <if test="registerAmount != null">
+        register_amount = #{registerAmount,jdbcType=DECIMAL},
+      </if>
+      <if test="flowAmount != null">
+        flow_amount = #{flowAmount,jdbcType=DECIMAL},
+      </if>
+      <if test="yearAmount != null">
+        year_amount = #{yearAmount,jdbcType=DECIMAL},
+      </if>
+      <if test="isUseFinanceSoft != null">
+        is_use_finance_soft = #{isUseFinanceSoft,jdbcType=VARCHAR},
+      </if>
+      <if test="softName != null">
+        soft_name = #{softName,jdbcType=VARCHAR},
+      </if>
+      <if test="isRatePaying != null">
+        is_rate_paying = #{isRatePaying,jdbcType=INTEGER},
+      </if>
+      <if test="investigateBy != null">
+        investigate_by = #{investigateBy,jdbcType=VARCHAR},
+      </if>
+      <if test="investigateDate != null">
+        investigate_date = #{investigateDate,jdbcType=DATE},
+      </if>
+      <if test="dealerTypeId != null">
+        dealer_type_id = #{dealerTypeId,jdbcType=INTEGER},
+      </if>
+      <if test="isRegister != null">
+        is_register = #{isRegister,jdbcType=INTEGER},
+      </if>
+      <if test="developer != null">
+        developer = #{developer,jdbcType=VARCHAR},
+      </if>
+      <if test="startupBusiness != null">
+        startup_business = #{startupBusiness,jdbcType=INTEGER},
+      </if>
+      <if test="businessStartDate != null">
+        business_start_date = #{businessStartDate,jdbcType=DATE},
+      </if>
+      <if test="businessEndDate != null">
+        business_end_date = #{businessEndDate,jdbcType=DATE},
+      </if>
+      <if test="promiseWeight != null">
+        promise_weight = #{promiseWeight,jdbcType=DECIMAL},
+      </if>
+      <if test="receiverBy != null">
+        receiver_by = #{receiverBy,jdbcType=VARCHAR},
+      </if>
+      <if test="receiverMobile != null">
+        receiver_mobile = #{receiverMobile,jdbcType=VARCHAR},
+      </if>
+      <if test="use != null">
+        use = #{use,jdbcType=BIT},
+      </if>
+      <if test="remark != null">
+        remark = #{remark,jdbcType=VARCHAR},
+      </if>
+      <if test="status != null">
+        status = #{status,jdbcType=VARCHAR},
+      </if>
+      <if test="createrId != null">
+        creater_id = #{createrId,jdbcType=VARCHAR},
+      </if>
+      <if test="createTime != null">
+        create_time = #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="lastAlterId != null">
+        last_alter_id = #{lastAlterId,jdbcType=VARCHAR},
+      </if>
+      <if test="lastAlterTime != null">
+        last_alter_time = #{lastAlterTime,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    where fd_id = #{fdId,jdbcType=BIGINT}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.hwagain.sp.policy.entity.Customer">
+    update customer
+    set map_import_id = #{mapImportId,jdbcType=INTEGER},
+      map_culture_id = #{mapCultureId,jdbcType=INTEGER},
+      map_china_id = #{mapChinaId,jdbcType=INTEGER},
+      province = #{province,jdbcType=VARCHAR},
+      city = #{city,jdbcType=VARCHAR},
+      county = #{county,jdbcType=VARCHAR},
+      cust_name = #{custName,jdbcType=VARCHAR},
+      short_name = #{shortName,jdbcType=VARCHAR},
+      cust_type_name = #{custTypeName,jdbcType=VARCHAR},
+      enterprise_type = #{enterpriseType,jdbcType=VARCHAR},
+      law_man = #{lawMan,jdbcType=VARCHAR},
+      law_reposibility = #{lawReposibility,jdbcType=VARCHAR},
+      mobile = #{mobile,jdbcType=VARCHAR},
+      tel = #{tel,jdbcType=VARCHAR},
+      fax = #{fax,jdbcType=VARCHAR},
+      address = #{address,jdbcType=VARCHAR},
+      post_no = #{postNo,jdbcType=VARCHAR},
+      register_amount = #{registerAmount,jdbcType=DECIMAL},
+      flow_amount = #{flowAmount,jdbcType=DECIMAL},
+      year_amount = #{yearAmount,jdbcType=DECIMAL},
+      is_use_finance_soft = #{isUseFinanceSoft,jdbcType=VARCHAR},
+      soft_name = #{softName,jdbcType=VARCHAR},
+      is_rate_paying = #{isRatePaying,jdbcType=INTEGER},
+      investigate_by = #{investigateBy,jdbcType=VARCHAR},
+      investigate_date = #{investigateDate,jdbcType=DATE},
+      dealer_type_id = #{dealerTypeId,jdbcType=INTEGER},
+      is_register = #{isRegister,jdbcType=INTEGER},
+      developer = #{developer,jdbcType=VARCHAR},
+      startup_business = #{startupBusiness,jdbcType=INTEGER},
+      business_start_date = #{businessStartDate,jdbcType=DATE},
+      business_end_date = #{businessEndDate,jdbcType=DATE},
+      promise_weight = #{promiseWeight,jdbcType=DECIMAL},
+      receiver_by = #{receiverBy,jdbcType=VARCHAR},
+      receiver_mobile = #{receiverMobile,jdbcType=VARCHAR},
+      use = #{use,jdbcType=BIT},
+      remark = #{remark,jdbcType=VARCHAR},
+      status = #{status,jdbcType=VARCHAR},
+      creater_id = #{createrId,jdbcType=VARCHAR},
+      create_time = #{createTime,jdbcType=TIMESTAMP},
+      last_alter_id = #{lastAlterId,jdbcType=VARCHAR},
+      last_alter_time = #{lastAlterTime,jdbcType=TIMESTAMP}
+    where fd_id = #{fdId,jdbcType=BIGINT}
+  </update>
+</mapper>
